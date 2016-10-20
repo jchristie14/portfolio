@@ -22,4 +22,24 @@
   	}
   	);
 
+    $('#rickify').hover(
+  	function() {
+      $(this).find('#rickifyOut').hide();
+      $(this).find('#rickifyIn').show();
+  	}, function () {
+  	  $(this).find('#rickifyOut').show();
+  	  $(this).find('#rickifyIn').hide();
+  	}
+  	);
+
+  	$('#graffiti').hover(
+  	function() {
+      $(this).find('#graffitiOut').hide();
+      $(this).find('#graffitiIn').show();
+  	}, function () {
+  	  $(this).find('#graffitiOut').show();
+  	  $(this).find('#graffitiIn').hide();
+  	}
+  	);
+
 })();

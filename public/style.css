@@ -6,24 +6,36 @@ h2 {
 	text-align: center;
 }
 
-#antlabIn p {
+/*currently, p is used only in project descriptions*/
+p {
 	padding: 4vw;
+	color: #e0e0e0;
+	font-size: 2vw;
+	font-family: Arial;
 	background: transparent;
 }
 
-#antlabIn {
+#antlabIn, #amsterdamIn, #rickifyIn, #graffitiIn {
 	height: 100%;
 	width: 100%;
 	border: 1px solid black;
-	background-image: url('/images/antlab.png');
 	background-size: contain;
-	filter: blur(5px);
+}
+
+#antlabIn {
+	background-image: url('/images/antlabtextdark.png');
 }
 
 #amsterdamIn {
-	height: 100%;
-	width: 100%;
-	border: 1px solid black;
+	background-image: url('/images/amsterdamtext.png');
+}
+
+#rickifyIn {
+	background-image: url('/images/rickifytext.png')
+}
+
+#graffitiIn {
+	background-image: url('/images/graffititext.png')
 }
 
 .projectShot {
