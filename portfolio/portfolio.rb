@@ -6,7 +6,7 @@ get '/' do
 end
 
 post '/contact' do
-	Pony.mail :to => 'omeara.christie@gmail.com',
+	Pony.mail :to => '',
 			  :from => 'portfolio',
 			  :subject => params[:subject],
 			  :body => "fn: #{params[:first_name]}; ln: #{params[:last_name]}; email: #{params[:email]}; message: #{params[:message]}"
