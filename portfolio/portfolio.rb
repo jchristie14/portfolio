@@ -6,13 +6,10 @@ get '/' do
 end
 
 post '/contact' do
-	params.to_s,
-	ENV["email"]
+	Pony.mail :to => ENV["email"],
+			  :from => 'portfolio',
+			  :subject => params[:subject],
+			  :body => "fn: #{params[:first_name]}; ln: #{params[:last_name]}; email: #{params[:email]}; message: #{params[:message]}"
 
-	# Pony.mail :to => 'ENV["email"]',
-	# 		  :from => 'portfolio',
-	# 		  :subject => params[:subject],
-	# 		  :body => "fn: #{params[:first_name]}; ln: #{params[:last_name]}; email: #{params[:email]}; message: #{params[:message]}"
-
-	# redirect back
+	redirect back
 end
