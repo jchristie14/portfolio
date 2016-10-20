@@ -6,7 +6,8 @@ get '/' do
 end
 
 post '/contact' do
-	params.to_s
+	params.to_s,
+	ENV["email"]
 
 	# Pony.mail :to => 'ENV["email"]',
 	# 		  :from => 'portfolio',
