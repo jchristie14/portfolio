@@ -18,7 +18,7 @@ end
 
 post '/contact' do
 
-  from = Email.new(email: 'portfolio')
+  from = Email.new(email: 'omeara.christie@gmail.com')
   subject = 'Hello World from the SendGrid Ruby Library!'
   to = Email.new(email: 'omeara.christie@gmail.com')
   content = Content.new(type: 'text/plain', value: "#{params[:message]}")
