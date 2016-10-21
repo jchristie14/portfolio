@@ -7,7 +7,7 @@ get '/' do
   erb :index
 end
 
-post '/contact' do
+post '/' do
 	Pony.mail :to => 'omeara.christie@gmail.com',
 			  :from => 'portfolio',
 			  :subject => params[:subject],
