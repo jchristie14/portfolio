@@ -36,6 +36,7 @@
   	function() {
       $(this).find('#graffitiOut').hide();
       $(this).find('#graffitiIn').show();
+      $('#graffitiIn').css("visibility", "visible");
   	}, function () {
   	  $(this).find('#graffitiOut').show();
   	  $(this).find('#graffitiIn').hide();

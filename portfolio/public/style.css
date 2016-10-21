@@ -2,8 +2,14 @@
 	background-color: #f5f5f5;
 }
 
+
 h2 {
 	text-align: center;
+}
+
+#logo {
+	font-family: 'Trirong', serif;
+	font-size: 4vw;
 }
 
 /*currently, p is used only in project descriptions*/
