@@ -1,38 +1,34 @@
 require 'sinatra'
 require 'pony'
 require 'sendgrid-ruby'
+require 'json'
 include SendGrid
 
 get '/' do
   erb :index
 end
 
-# post '/contact' do
-# 	Pony.mail :to => 'omeara.christie@gmail.com',
-# 			  :from => 'portfolio',
-# 			  :subject => params[:subject],
-# 			  :body => "fn: #{params[:first_name]}; ln: #{params[:last_name]}; email: #{params[:email]}; message: #{params[:message]}"
 
-
-# end
 
 post '/contact' do
 
-  from = Email.new(email: 'PORTFOLIO')
-  subject = 'Hello World from the SendGrid Ruby Library!'
-  to = Email.new(email: 'omeara.christie@gmail.com')
-  content = Content.new(type: 'text/plain', value: "#{params[:message]}")
-  mail = Mail.new(from, subject, to, content)
+
+  from = Email.new(email: "#{params[:email]}")
+  subject = "#{params[:subject]}"
+  to = Email.new(email: ENV['email'])
+  content = Content.new(type: 'text/plain', value: "first name: #{params[:first_name]}; last name: #{params[:last_name]} \n message: #{params:message}")
+  mail = SendGrid::Mail.new(from, subject, to, content)
+  puts mail.to_json
 
   sg = SendGrid::API.new(api_key: ENV['SENDGRID_API'])
-  # response = sg.client.mail._('send').post(request_body: mail.to_json)
-  # puts response.status_code
-  # puts response.body
-  # puts response.headers
+  response = sg.client.mail._('send').post(request_body: mail.to_json)
+  puts response.status_code
+  puts response.body
+  puts response.headers
 
-  sg.send(mail)
 
   redirect back
 
 end
+
 
