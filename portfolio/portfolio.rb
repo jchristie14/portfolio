@@ -18,7 +18,7 @@ end
 
 post '/contact' do
 
-  from = Email.new(email: 'omeara.christie@gmail.com')
+  from = Email.new(email: 'PORTFOLIO')
   subject = 'Hello World from the SendGrid Ruby Library!'
   to = Email.new(email: 'omeara.christie@gmail.com')
   content = Content.new(type: 'text/plain', value: "#{params[:message]}")
@@ -29,6 +29,10 @@ post '/contact' do
   puts response.status_code
   puts response.body
   puts response.headers
+
+  sg.send(mail)
+
+  redirect back
 
 end
 
