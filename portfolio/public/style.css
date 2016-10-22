@@ -83,7 +83,7 @@ img {
     box-shadow: 0 1px 0 0 #000;
 }
 
-img.logo {
+.logo {
 	height: 66px;
 	width: 66px;
 	border: none;
