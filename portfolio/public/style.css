@@ -84,9 +84,10 @@ img {
 }
 
 .logo {
+	border: 1px solid red;
 	height: 66px;
 	width: 66px;
-	border: none;
+	/*border: none;*/
 	float: right;
 	margin: 1vw;
 }
