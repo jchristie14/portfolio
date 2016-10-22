@@ -12,6 +12,14 @@ h2 {
 	font-size: 4vw;
 }
 
+#self {
+	float: left;
+}
+
+h4 {
+	
+}
+
 /*currently, p is used only in project descriptions*/
 p {
 	padding: 4vw;
