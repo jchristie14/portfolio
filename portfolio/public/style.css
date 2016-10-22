@@ -14,10 +14,11 @@ h2 {
 
 #self {
 	float: left;
+	margin-right: 2vw;
 }
 
 h4 {
-	
+
 }
 
 /*currently, p is used only in project descriptions*/
