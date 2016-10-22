@@ -82,3 +82,17 @@ img {
     border-bottom: 1px solid #000;
     box-shadow: 0 1px 0 0 #000;
 }
+
+.logo {
+	height: 66px;
+	width: 66px;
+	border: none;
+	float: right;
+	margin: 1vw;
+}
+
+ .btn.waves-effect.waves-gray {
+/*   The alpha value allows the text and background color
+  of the button to still show through.*/ 
+   background-color: rgba(96, 96, 96, 0.65);
+ }
