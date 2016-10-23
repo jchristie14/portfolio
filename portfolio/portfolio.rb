@@ -13,10 +13,10 @@ end
 post '/contact' do
 
 
-  from = Email.new(email: "#{params[:email]}")
+  from = Email.new(email: "portfolio@mail")
   subject = "#{params[:subject]}"
   to = Email.new(email: ENV['email'])
-  content = Content.new(type: 'text/plain', value: "first name: #{params[:first_name]}; last name: #{params[:last_name]} \n message: #{params[:message]}")
+  content = Content.new(type: 'text/plain', value: "first name: #{params[:first_name]}; last name: #{params[:last_name]} \n message: #{params[:message]} \n email: #{params[:email]}")
   mail = SendGrid::Mail.new(from, subject, to, content)
   puts mail.to_json
 
